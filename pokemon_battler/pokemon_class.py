@@ -18,30 +18,5 @@ class Pokemon(ABC):
         if value == 'lightning':
             self.attacks = ['electro clash']
             self._type = value
- 
-       
-
-        
-
+    
 pokemon_a = Pokemon('Pikachu', 'lightning', 100)
-pokemon_a.type = 'lightning'
-print(pokemon_a.type)
-
-# class Person:
-#     def __init__(self, name, location):
-#         self.name = name
-#         self.past_locations = []
-#         self.location = location
-
-#     @property
-#     def location(self):
-#         return self._location
-
-#     @location.setter
-#     def location(self, location):
-#         self._location = location
-#         self.past_locations.append(location)
-
-# person_a = Person('Andrei', 'Aurora')
-# person_a.location = 'Serbia'
-# print(person_a.past_locations)
