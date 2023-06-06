@@ -1,5 +1,6 @@
 from pokemon_class import Pokemon
 
+#four main types of pokemon that will be generated
 class ElectricPokemon(Pokemon):
     def __init__(self, name, hp, level=0, battles_won=0) -> None:
         super().__init__(name, 'electric', hp, level, battles_won, {'Electrify': 5, 'Fusion Bolt': 12, 'Zap Cannon': 15, 'Wildbolt Storm': 26})
