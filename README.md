@@ -10,3 +10,6 @@ Another simple game of a hangman. You have six attempts to guess the random word
 ## 3 Web scraping project
 This is a project that I am very proud of because I have never done anything like this before. 
 The goal of the project is to download the first n albums from any given page and then save the data we decide we want to a database (in this case SQLlite3).
+
+## 4 Pokemon battler - in construction, not finished
+This will be a game in which you can battle with various types of pokemon, and use different types of moves. Every type of pokemon will have different set of moves.
