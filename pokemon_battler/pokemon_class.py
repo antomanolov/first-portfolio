@@ -40,7 +40,7 @@ class Pokemon(ABC):
             delay_print(f'---{current_pokemon.name}--- DEALT {dmg_dealt} DMG')
             if current_pokemon == self:
                 other.hp -= dmg_dealt
-                print(f'---{other.name}--- is on {other.hp} HP')
+                delay_print(f'---{other.name}--- is on {other.hp} HP')
                 if other.hp <= 0:
                     delay_print(f'---{other.name}--- FAINTED ---{self.name}-- WON THE BATTLE')
                     

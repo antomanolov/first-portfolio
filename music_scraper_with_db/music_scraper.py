@@ -82,6 +82,6 @@ connect_db.commit()
 sorted_genre_dict = sorted(genre_counter, key=genre_counter.get, reverse=True)
 
 # loop to print the Genre: count of genre in albums to test if it works
-# for genre in sorted_genre_dict[:10]:
-#     print(f'{genre}: {genre_counter[genre]}')
+for genre in sorted_genre_dict[:10]:
+    print(f'{genre}: {genre_counter[genre]}')
 
