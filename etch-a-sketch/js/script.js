@@ -1,3 +1,4 @@
+// TODO find how to make random rgb color and put with the three already existing ones
 let allGridSquares = document.querySelectorAll('.square')
 let btn = document.querySelector('.refresh')
 let gridNumber = document.querySelector('input')
@@ -70,3 +71,4 @@ circleColor.forEach(cirle => {
 btn.addEventListener('click', () =>{
     grid.innerHTML = ''
 })
+
