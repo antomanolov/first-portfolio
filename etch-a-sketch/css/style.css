@@ -48,11 +48,24 @@ h1 {
   gap: 10px;
   justify-content: center;
 }
-.blueviolet {
+.blueviolet,
+.black,
+.yellow {
   width: 60px;
   height: 60px;
   border-radius: 50%;
+}
+
+.blueviolet {
   background-color: blueviolet;
+}
+
+.black {
+  background-color: black;
+}
+
+.yellow {
+  background-color: yellow;
 }
 
 .choose-container {
