@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.square {
+  border: 1px solid black;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 48px;
+}
+.input-h3 {
+  text-align: center;
+  margin-bottom: 30px;
+  color:blueviolet
+}
+
+.square-container {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  border: 2px solid blueviolet;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 200px;
+  padding: 50px;
+  
+  
+}
+
+.pick-h3 {
+  margin-top: 200px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.color-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.blueviolet {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: blueviolet;
+}
+
+.choose-container {
+  align-self: flex-start;
+  flex-wrap: wrap;
+}
+
+
+
+
