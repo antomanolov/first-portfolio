@@ -1,4 +1,5 @@
-// TODO make numbers dissapear after clicking the sign 
+// TODO LOOK AT WHAT BRANCH ARE YOU WORKING
+// make numbers dissapear after clicking the sign 
 // OR after clicking sing and starting to write
 // make (%, +/- and .) work
 function evaluate(arr) {
