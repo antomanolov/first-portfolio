@@ -1,17 +1,10 @@
 // TODO LOOK AT WHAT BRANCH ARE YOU WORKING
-// make numbers dissapear after clicking the sign 
-// OR after clicking sing and starting to write
 // make (%, +/- and .) work
+
+// function that takes the place of eval()
+// it takes every second index [1, '+' , 2]
+//  and executest the action with the operator
 function evaluate(arr) {
-    
-    while (arr[arr.length - 1] == '*' ||
-        arr[arr.length - 1] == '-' ||
-        arr[arr.length - 1] == '+' ||
-        arr[arr.length - 1] == '/' ||
-        arr[arr.length - 1] == '') {
-        arr.pop()
-    }
-    console.log(arr)
     for (let i = 0; i < arr.length - 2; i += 2) {
         let currSum = 0
         let num1 = parseInt(arr[i])
@@ -33,10 +26,39 @@ function evaluate(arr) {
         sum = currSum
     }
     string = [sum,]
-    console.log(string)
-    
     return sum
 }
+
+
+// function that ensures operators will be used only once even if clicked more than that
+function lastIndex(arr) {
+    if (arr.slice(-1) != '+' &&
+    arr.slice(-1) != '-' &&
+    arr.slice(-1) != '/' &&
+    arr.slice(-1) != '*') {
+        return true
+    }
+    return false
+}
+
+// this function is made to ensure that every 2 numbers will be immediately reduced to one 
+function action(operator) {
+    if (display.textContent != ''){
+        string.push(parseInt(display.textContent))
+    }
+    
+    if (string.length >= 3) {
+        
+        num = evaluate(string)
+        display.textContent = num
+        string.push(operator)
+    } 
+    if (lastIndex(string)) {
+        display.innerHTML = ''
+        string.push(operator)
+    }
+}
+
 
 const allNumbers = document.querySelectorAll('.number')
 const display = document.querySelector('.display p')
@@ -50,7 +72,7 @@ const equal = document.querySelector('.equal')
 
 
 // const sumButton = document.querySelector
-let firstLen = 1
+
 let sum = 0
 let string = []
 
@@ -74,68 +96,20 @@ allNumbers.forEach(number => number.addEventListener('click', () => {
 }))
 
 add.addEventListener('click', () => {
-    if (display.textContent != ''){
-        string.push(parseInt(display.textContent))
-    }
-    
-    if (string.length >= 3) {
-        console.log(string)
-        num = evaluate(string)
-        display.textContent = num
-        string.push('+')
-    } 
-    if (string.slice(-1) != '+') {
-        display.innerHTML = ''
-        string.push('+')
-    }
-    // if(string.slice(-1) != '' &&
-    // string.slice(-1) != '/' &&
-    // string.slice(-1) != '*' &&
-    // string.slice(-1) != '-' &&
-    // string.slice(-1) != '+'){
-    //     string.push('+')
-    // }
-    console.log(string)
-    
-    
-    
+    action('+')
 })
 
 
 subtract.addEventListener('click', () => {
-    if(display.textContent != ''){
-        string.push(parseInt(display.textContent))
-        string.push('-')
-    }
-
-    if (string.length === 3) {
-        display.textContent = `${evaluate(string)}`
-    }
-    display.innerHTML = ''
+   action('-')
 })
 
 multiply.addEventListener('click', () => {
-    if(display.textContent != ''){
-        string.push(parseInt(display.textContent))
-        string.push('*')
-        
-        
-    }
-    if (string.length === 3) {
-        display.textContent = `${evaluate(string)}`
-    }
-    display.innerHTML = ''
+    action('*')
 })
 
 division.addEventListener('click', () => {
-    if(display.textContent != ''){
-        string.push(parseInt(display.textContent))
-        string.push('/')
-        
-    }
-    if (string.length === 3) {
-        display.textContent = `${evaluate(string)}`
-    }
+    action('/')
 })
 
 equal.addEventListener('click', () => {
