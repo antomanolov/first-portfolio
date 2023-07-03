@@ -1,9 +1,4 @@
-// TODO LOOK AT WHAT BRANCH ARE YOU WORKING
-// make (%, +/- and .) work
-
-// function that takes the place of eval()
-// it takes every second index [1, '+' , 2]
-//  and executest the action with the operator
+// TODO make it work with numpad
 function evaluate(arr) {
     for (let i = 0; i < arr.length - 2; i += 2) {
         let currSum = 0
