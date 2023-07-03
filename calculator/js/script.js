@@ -32,7 +32,8 @@ function evaluate(arr) {
         } 
         sum = currSum
     }
-    string = ''
+    string = [sum,]
+    console.log(string)
     
     return sum
 }
@@ -51,70 +52,99 @@ const equal = document.querySelector('.equal')
 // const sumButton = document.querySelector
 let firstLen = 1
 let sum = 0
-let string = ''
+let string = []
 
 clearBtn.addEventListener('click', () => {
     display.innerHTML = '0'
+    string = []
     sum = 0
 })
 
 allNumbers.forEach(number => number.addEventListener('click', () => {
-    if(display.textContent == 0){
+    if(display.textContent == 0 || display.textContent == string[0]){
         display.innerHTML = ''
     }
+    
     if (display.textContent.length <= 11) {
         display.textContent += number.value
     }
     
+    
+    
 }))
 
 add.addEventListener('click', () => {
-    string += display.textContent
-    string += ' + '
-    
-    display.innerHTML = ''
-    if(string.split(' ').length > 4) {
-        display.textContent = `${evaluate(string.split(' '))}`
-        
+    if (display.textContent != ''){
+        string.push(parseInt(display.textContent))
     }
+    
+    if (string.length >= 3) {
+        console.log(string)
+        num = evaluate(string)
+        display.textContent = num
+        string.push('+')
+    } 
+    if (string.slice(-1) != '+') {
+        display.innerHTML = ''
+        string.push('+')
+    }
+    // if(string.slice(-1) != '' &&
+    // string.slice(-1) != '/' &&
+    // string.slice(-1) != '*' &&
+    // string.slice(-1) != '-' &&
+    // string.slice(-1) != '+'){
+    //     string.push('+')
+    // }
+    console.log(string)
+    
     
     
 })
 
 
 subtract.addEventListener('click', () => {
-    string += display.textContent
-    string += ' - '
-    display.innerHTML = ''
-    if(string.split(' ').length > 3) {
-        display.textContent = `${evaluate(string.split(' '))}`
+    if(display.textContent != ''){
+        string.push(parseInt(display.textContent))
+        string.push('-')
     }
+
+    if (string.length === 3) {
+        display.textContent = `${evaluate(string)}`
+    }
+    display.innerHTML = ''
 })
 
 multiply.addEventListener('click', () => {
-    string += display.textContent
-    string += ' * '
-    display.innerHTML = ''
-    if(string.split(' ').length > 3) {
-        display.textContent = `${evaluate(string.split(' '))}`
+    if(display.textContent != ''){
+        string.push(parseInt(display.textContent))
+        string.push('*')
+        
+        
     }
+    if (string.length === 3) {
+        display.textContent = `${evaluate(string)}`
+    }
+    display.innerHTML = ''
 })
 
 division.addEventListener('click', () => {
-    string += display.textContent
-    string += ' / '
-    display.innerHTML = ''
-    if(string.split(' ').length > 3) {
-        display.textContent = `${evaluate(string.split(' '))}`
+    if(display.textContent != ''){
+        string.push(parseInt(display.textContent))
+        string.push('/')
+        
+    }
+    if (string.length === 3) {
+        display.textContent = `${evaluate(string)}`
     }
 })
 
 equal.addEventListener('click', () => {
-    string += display.textContent
-    console.log(string)
-    if(string.split(' ').length === 3) {
-        display.textContent = `${evaluate(string.split(' '))}`
+    if(display.textContent != ''){
+        string.push(parseInt(display.textContent))
     }
-    string = ''
+    
+    display.textContent = `${evaluate(string)}`
+    
+    string = []
 })
 
