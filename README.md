@@ -30,3 +30,6 @@ Fully functional calculator (with some small exceptions, like '%' func, '-/+' fu
 
 ## 9 Musecal Planetarium - under construction
 This is my last project, dynamic website that will be fully functional, with registration, DB and at some point hosted.
+
+## 10 Etch-a-Sketch 
+Another Odin Project.
