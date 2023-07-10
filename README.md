@@ -19,9 +19,14 @@ The goal of the project is to download the first n albums from any given page an
 ## 5 Pokemon battler - in construction/not finished
 This will be a game in which you can battle with various types of pokemon, and use different types of moves. Every type of pokemon will have different set of moves.
 
-## 6 Landing Page - in construction/not finished
+## 6 Landing Page
+Landing page - task that I've done from Odin Project excercise.
 
-## 7 Rock, paper, scissors Js game - in construction/not finished
+## 7 Rock, paper, scissors Js game
+Game of rock paper scissor with simple UI and round counter (wins and loses).
 
 ## 8 Calculator - HTML/CSS/JS 
 Fully functional calculator (with some small exceptions, like '%' func, '-/+' func and '.' but this will be added soon)
+
+## 9 Musecal Planetarium - under construction
+This is my last project, dynamic website that will be fully functional, with registration, DB and at some point hosted.
