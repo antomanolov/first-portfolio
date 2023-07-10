@@ -1,4 +1,6 @@
 # Presentation of my first portfolio
+Some stuff may look too basic, but I think that all knowledge must be shown, even the smallest of pieces. To know a programing language is to know the basics, everything else can be found on the internet.
+
 
 This are a few little projects to show you my knowledge in Python, and codding in general.
 ## 1 The most used algorithms in programming
@@ -20,3 +22,6 @@ This will be a game in which you can battle with various types of pokemon, and u
 ## 6 Landing Page - in construction/not finished
 
 ## 7 Rock, paper, scissors Js game - in construction/not finished
+
+## 8 Calculator - HTML/CSS/JS 
+Fully functional calculator (with some small exceptions, like '%' func, '-/+' func and '.' but this will be added soon)
